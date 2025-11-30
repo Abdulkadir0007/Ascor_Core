@@ -1,0 +1,89 @@
+
+    :root {
+    /* Top Header CSS */
+    --subheader_background:#006FD8;
+    --subheader_background_color:#fff;
+    --subheader_border_color:#006FD8;
+    --subheader_text_color2:#333;
+    --subheader_text_color:#fff;
+    --subheader_border_color2:#333;
+    --subheader_socail_icon:#fff;
+    --subheader_menuborder_color:#fff;
+    /* Contact Page CSS */
+    --gmaps_width:100%;
+    --gmaps_height:450px;
+    --gmaps_margin_top:50px;
+    /* Contact Form Input */
+    --contact_form_font_size:16px;
+    --contact_form_input_color:#560bad;
+    --contact_form_input_background:rgba(255,255,255,1);
+    --contact_form_input_padding:12px 10px 12px 10px;
+    --contact_form_input_border_color:#560bad;
+    --contact_form_input_border_width:2px;
+    --contact_form_input_border_radius:5px;
+    /* Contact Form Input */
+    --contf_label_font_size:16px;
+    --contf_after_label_font_size:12px;
+    --contf_label_color:#999;
+    --contf_after_label_color:#007bff;
+    --contf_label_background:rgba(255,255,255,1);
+    --contf_after_label_background:rgba(255,255,255,1);
+
+    /* Header Style */
+    --header_background:#fff;
+    /* Sticky Header Style */
+    --sticky_header_background:#ffffff;
+    --sticky_header_menu_color:#333333;
+    --sticky_header_padding:10px;
+    /* Anomation Buttonn Style */
+    --animated_button_font_size:16px;
+    --animated_button_radius:8px;
+    --animated_button_text_color:#560bad;
+    --animated_button_background_color:#fff;
+    --animated_button_hover_color:#fff;
+    --animated_button_hover_back:#560bad;
+    --animated_button_padding:10px 24px 10px 24px;
+    /* Load More Button */
+    --load_more_font_size : 16px;
+    --load_more_button_readius : 0px;
+    --load_more_button_color : #fff;
+    --load_more_button_back : #1D1E5C;
+    --load_more_button_hover_color : #fff;
+    --load_more_button_hover_back : #292a71;
+    --load_more_button_width : 100%;
+    --load_more_button_padding:10px 10px 10px 10px;
+    /* Primary Button */
+    --primary_button_font_size : 16px;
+    --primary_button_border_radius : 5px;
+    --primary_button_text_color : #fff;
+    --primary_button_background : #1D1E5c;
+    --primary_button_hover_color : #fff;
+    --primary_button_background_hover : #292a71;
+    --primary_button_padding:10px 25px 10px 25px;
+    }
+    
+      /* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sticky-header {
+        position: static !important; /* Sticky effect বন্ধ হবে */
+        box-shadow: none !important; /* Shadow সরিয়ে ফেলা */
+        background: transparent !important; /* ব্যাকগ্রাউন্ড স্বচ্ছ করা */
+    }
+}
+        
+/* Mobile Large */
+@media (max-width: 767px) {
+   .sticky-header {
+        position: static !important; /* Sticky effect বন্ধ হবে */
+        box-shadow: none !important; /* Shadow সরিয়ে ফেলা */
+        background: transparent !important; /* ব্যাকগ্রাউন্ড স্বচ্ছ করা */
+    }
+}
+    @media (max-width: 800px){
+    .blog-main .ascora-row{
+    flex-direction:column;
+}
+    .page-main-section .ascora-row{
+    flex-direction:column;
+}}
+    

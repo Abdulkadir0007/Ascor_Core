@@ -1,0 +1,278 @@
+/**********************
+***** Sub Header *****
+**********************/
+/* Sub Header 1 */
+.sub-header-1 {
+  background-color: var(--subheader_background);
+  padding: 10px 0;
+}
+.sub-header-1 .cont-info span {
+  color: var(--subheader_text_color);
+}
+.sub-header-1 .socail-icon li a {
+  color: var(--subheader_socail_icon) !important;
+}
+.sub-header-1 .sub-header-menu ul li {
+  border-right: 1px solid;
+  border-right-color: var(--subheader_menuborder_color);
+  padding: 5px;
+}
+.sub-header-1 .sub-header-menu ul li:first-child {
+  border-left: 1px solid;
+  border-left-color: var(--subheader_menuborder_color);
+}
+.sub-header-1 .sub-header-menu ul li a {
+  text-decoration: none;
+  color: var(--subheader_text_color);
+}
+/* Sub Header 2 */
+.sub-header-2 {
+  padding: 10px 0;
+  border-top: 5px solid;
+  border-color: var(--subheader_border_color);
+  background-color: var(--subheader_background_color);
+}
+.sub-header-2 .sub-header-menu ul li {
+  border-right: 1px solid;
+  border-right-color: var(--subheader_border_color2);
+}
+.sub-header-2 .sub-header-menu ul li:first-child {
+  border-left: 1px solid;
+  border-left-color: var(--subheader_border_color2);
+}
+.sub-header-2 .sub-header-menu ul li a {
+  text-decoration: none;
+  color: var(--subheader_text_color2);
+}
+.sub-header-2 .cont-info span {
+  color: var(--subheader_text_color2);
+}
+/* ======= Contact page =========*/
+.contact-page .g-maps {
+  margin-bottom: 20px;
+  margin-top: var(--gmaps_margin_top);
+}
+.contact-page .g-maps iframe {
+  width: var(--gmaps_width);
+  height: var(--gmaps_height);
+}
+.contact-page .contact-article {
+  margin: 10px auto 20px auto;
+}
+.contact-page .contact-article p {
+  margin-top: 10px;
+}
+.contact-page .rt-masseg {
+  margin-bottom: 20px;
+}
+
+/* ======== Ascora Button =========== */
+.ascora-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: var(--animated_button_font_size);
+  font-weight: bold;
+  color: var(--animated_button_text_color)!important;
+  background: var(--animated_button_background_color);
+  border: 2px solid var(--animated_button_text_color)!important;
+  border-radius: var(--animated_button_radius);
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  text-decoration: none;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.ascora-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 30px;
+  height: 30px;
+  /* background: linear-gradient(45deg, #560bad, #9a4eff); */
+  background: var(--animated_button_hover_back);
+  border-radius: 50%;
+  bottom: -15px;
+  right: -15px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.ascora-button:hover {
+  color: var(--animated_button_hover_color)!important;
+}
+
+.ascora-button:hover::before {
+  transform: scale(13);
+}
+/* ======== End Ascora Button =========== */
+
+/* রেস্পন্সিভ স্টাইল */
+@media (max-width: 768px) {
+  .ascora-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+#comment-submit {
+  margin-bottom: 10px;
+}
+.primary-button {
+  background-color: var(--primary_button_background);
+  border-radius: var(--primary_button_border_radius);
+  color: var(--primary_button_text_color)!important;
+  font-size: var(--primary_button_font_size);
+  text-decoration: none;
+  padding: var(--primary_button_padding);
+  transition: 0.2s;
+  border: 0px;
+  display: inline-block;
+}
+.primary-button:hover,
+.primary-button:active {
+  background-color: var(--primary_button_background_hover);
+  color: var(--primary_button_hover_color)!important;
+ 
+}
+
+/* Contact Form */
+.contact-form {
+  margin-bottom: 20px;
+}
+.contact-page .contact-form .contact-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+/* ফর্ম গ্রুপের স্টাইল */
+.contact-page .contact-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.contact-page .contact-form .form-group input {
+  width: 100%;
+  padding: var(--contact_form_input_padding);
+  font-size: var(--contact_form_font_size);
+  border-style: solid;
+  border-width: var(--contact_form_input_border_width);
+  border-color: var(--contact_form_input_border_color);
+  border-radius: var(--contact_form_input_border_radius);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background: var(--contact_form_input_background);
+  color: var(--contact_form_input_color);
+}
+
+.contact-page .contact-form .form-group label {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: var(--contf_label_font_size);
+  color: var(--contf_label_color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: var(--contf_label_background);
+  padding: 0 5px;
+}
+
+.contact-page .contact-form .form-group.focused label,
+.contact-page .contact-form .form-group.filled label {
+  top: 0;
+  font-size: var(--contf_after_label_font_size);
+  color: var(--contf_after_label_color);
+  background-color: var(--contf_after_label_background);
+}
+/* Textarea */
+
+.contact-page .contact-form .text-area {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-page .contact-form .text-area textarea {
+  width: 100%;
+  padding: var(--contact_form_input_padding);
+  font-size: var(--contact_form_font_size);
+  border-style: solid;
+  border-width: var(--contact_form_input_border_width);
+  border-color: var(--contact_form_input_border_color);
+  border-radius: var(--contact_form_input_border_radius);
+  outline: none;
+  background: var(--contact_form_input_background);
+  resize: vertical;
+  color: var(--contact_form_input_color);
+}
+/* .contact-form .form-group label {
+  transform: translateY(-50%);
+} */
+.contact-page .contact-form .text-area label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: var(--contf_label_font_size);
+  color: var(--contf_label_color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: var(--contf_label_background);
+  padding: 0 5px;
+}
+
+/* ফোকাস বা ভ্যালু থাকলে লেবেল উপরে উঠবে */
+
+.contact-page .contact-form .text-area.focused label,
+.contact-page .contact-form .text-area.filled label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--contf_after_label_color);
+  background-color: var(--contf_after_label_background);
+}
+/* Header */
+header .header {
+  background-color: var(--header_background);
+}
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  background-color: var(--sticky_header_background) !important;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  padding-top: var(--sticky_header_padding) !important;
+  padding-bottom: var(--sticky_header_padding) !important;
+}
+.boxed .sticky-header {
+  max-width: var(--layout_width);
+}
+.sticky-header .header-menu .menu > li > a {
+  color: var(--sticky_header_menu_color);
+}
+/* load-more-btn */
+#load-more-btn{
+  margin: 20px auto;
+  padding: var(--load_more_button_padding);
+  cursor: pointer;
+  width: var(--load_more_button_width);
+  background-color: var(--load_more_button_back);
+  color: var(--load_more_button_color) !important;
+  font-size: var(--load_more_font_size);
+  text-decoration: none;
+  transition: 0.2s;
+  border: 0px;
+  display: inline-block;
+  border-radius: var(--load_more_button_readius);
+}
+#load-more-btn:hover{
+  color: var(--load_more_button_hover_color)!important;
+  background-color: var(--load_more_button_hover_back);
+}
