@@ -10,6 +10,24 @@ declare(strict_types=1);
 
 defined('ABSPATH') || exit;
 // Prevent direct access
+if (class_exists('Ascora_WooCommerce')) {
+    Redux::set_fields(
+        $opt_name,
+        'header-lay',
+        [
+            [
+                'id'       => 'web_header_type',
+                'type'     => 'button_set',
+                'title'    => esc_html__('Website Header Type', 'ascora-core'),
+                'options'  => [
+                    'normal'      => esc_html__('Normal Header', 'ascora-core'),
+                    'woocommerce' => esc_html__('Woocommerce Header', 'ascora-core'),
+                ],
+                'default'  => 'normal',
+            ],
+        ]
+    );
+}
 
 Redux::set_fields(
     $opt_name,
@@ -47,6 +65,8 @@ Redux::set_fields(
                 ],
             ],
             'default'  => '1',
+
+            'required' => ['web_header_type', '=', 'normal'],
         ],
         [
             'id'       => 'header-tagline',
