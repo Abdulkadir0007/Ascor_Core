@@ -12,24 +12,26 @@ if (! defined('ABSPATH')) {
 }
 global $ascora;
 ?>
-<div class="header-layout-3">
-    <div class="logo-img text-center align-center">
-        <?php if (!empty($ascora['logo-img']['url'])): ?>
-        <a href="<?php echo home_url(); ?>" class="logo-img"><img
-                src="<?php echo esc_url($ascora['logo-img']['url']) ?>"
-                alt="<?php bloginfo('name') ?>"></a>
-        <?php else: ?>
-        <a href="<?php echo home_url(); ?>">
-            <h2 class="Web-logo">
-                <?php echo esc_html($ascora['logo-text']); ?>
-            </h2>
-        </a>
-        <?php endif; ?>
+<div class="header-layout-3  ascora-main-menu">
+    <div class="ascora-menu-resm">
+        <div class="logo-img text-center align-center">
+            <?php if (!empty($ascora['logo-img']['url'])): ?>
+            <a href="<?php echo home_url(); ?>" class="logo-img"><img
+                    src="<?php echo esc_url($ascora['logo-img']['url']) ?>"
+                    alt="<?php bloginfo('name') ?>"></a>
+            <?php else: ?>
+            <a href="<?php echo home_url(); ?>">
+                <h2 class="Web-logo">
+                    <?php echo esc_html($ascora['logo-text']); ?>
+                </h2>
+            </a>
+            <?php endif; ?>
+        </div>
     </div>
     <div class="hader-menu-6 align-center">
-        <div class="header-menu">
+        <div class="header-menu site-main-header">
             <div class="dorpdown-menu flex-container-space-between">
-                <nav class="main-menu search right">
+                <nav class="main-menu search right ascora-ds-menu">
                     <?php wp_nav_menu([
                         'theme_location' => 'main-menu',
                         'container'      => false,

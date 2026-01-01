@@ -4,7 +4,7 @@
  * Plugin Name: Ascora Core
  * Plugin URI: https://abkadir.com/ascora-pro
  * Description: Unlock premium features and templates for the Ascora theme. Adds core features and functionality to the Ascora theme.Core functionalities for the Ascora theme, including pro features, custom templates, and extra options.
- * Version: 1.0.1
+ * Version: 1.2.0
  * Author: Abdul Kadir
  * Author URI: https://abkadir.com
  * License: GPL2
@@ -112,7 +112,7 @@ if (!class_exists('Ascora_Core')) {
         }
     }
 
-    // ক্লাস অবজেক্ট তৈরি করা
+
     new Ascora_Core();
 }
 

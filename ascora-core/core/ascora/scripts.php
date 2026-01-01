@@ -19,6 +19,7 @@ function ascora_scripts()
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+         function middleLogo() {
         <?php
             $logo = (!empty($ascora['logo-img']['url']))
                 ? '<a href="' . home_url() . '" class="logo-img"><img src="' . esc_url($ascora['logo-img']['url']) . '" alt="' . get_bloginfo('name') . '"></a>'
@@ -26,23 +27,25 @@ function ascora_scripts()
     ?>
 
         let logo =
-        `<?php echo $logo; ?>`; // PHP থেকে JavaScript-এ ভ্যালু পাঠানো
+        `<?php echo $logo; ?>`; 
 
-        const selectLogo = document.querySelector(".middle-logo ul"); // UL সিলেক্ট করা
-        if (!selectLogo) return; // UL না থাকলে কিছু করবে না
-
-        const logoLi = selectLogo.querySelectorAll(":scope > li"); // শুধু ডিরেক্ট `li` নির্বাচন
-        let totalLi = logoLi.length; // মোট `li` সংখ্যা
-        totalLi += 1; // মোট `li` সংখ্যা
+        const selectLogo = document.querySelector(".middle-logo ul"); 
+        if (!selectLogo) return; 
+        const logoLi = selectLogo.querySelectorAll(":scope > li"); 
+        let totalLi = logoLi.length; 
+        totalLi += 1;
 
         if (totalLi > 0) {
-            const middleLI = Math.floor(totalLi / 2); // মাঝখানের ইনডেক্স বের করা
+            const middleLI = Math.floor(totalLi / 2);
 
-            const newLogo = document.createElement("li"); // নতুন `li` তৈরি করা
-            newLogo.innerHTML = logo; // `li` এর ভিতরে `<a>` যোগ করা
+            const newLogo = document.createElement("li"); 
+                    newLogo.className = 'website-logo';
+                    newLogo.innerHTML = logo; 
 
-            selectLogo.insertBefore(newLogo, logoLi[middleLI]); // মাঝখানে ইনসার্ট করা
+            selectLogo.insertBefore(newLogo, logoLi[middleLI]); 
         }
+    }
+    middleLogo();
     });
 </script>
 
